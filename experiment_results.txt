@@ -1,0 +1,56 @@
+
+Experiment: Baseline
+Overall Accuracy: 72.72%
+Class-wise Accuracies:
+  airplane: 81.00%
+  automobile: 88.00%
+  bird: 60.50%
+  cat: 59.60%
+  deer: 63.20%
+  dog: 61.10%
+  frog: 76.20%
+  horse: 85.50%
+  ship: 75.60%
+  truck: 76.50%
+
+Experiment: Random Label Shuffle
+Overall Accuracy: 11.54%
+Class-wise Accuracies:
+  airplane: 34.30%
+  automobile: 2.10%
+  bird: 4.50%
+  cat: 5.70%
+  deer: 0.90%
+  dog: 6.80%
+  frog: 10.30%
+  horse: 5.70%
+  ship: 8.10%
+  truck: 37.00%
+
+Experiment: Label Noise (20%)
+Overall Accuracy: 66.79%
+Class-wise Accuracies:
+  airplane: 74.20%
+  automobile: 76.20%
+  bird: 51.70%
+  cat: 53.20%
+  deer: 65.60%
+  dog: 62.00%
+  frog: 74.60%
+  horse: 66.20%
+  ship: 68.30%
+  truck: 75.90%
+
+Experiment: Input Perturbation
+Overall Accuracy: 69.53%
+Class-wise Accuracies:
+  airplane: 76.30%
+  automobile: 84.90%
+  bird: 52.30%
+  cat: 43.70%
+  deer: 57.40%
+  dog: 65.20%
+  frog: 87.40%
+  horse: 72.50%
+  ship: 83.50%
+  truck: 72.10%

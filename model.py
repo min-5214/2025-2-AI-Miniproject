@@ -1,9 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torch.optim as optim
-from torchvision import datasets, transforms
-from torch.utils.data import DataLoader
+from sklearn.metrics import confusion_matrix
 
 # 1. CNN Model Definition
 class SimpleCNN(nn.Module):
@@ -23,20 +21,28 @@ class SimpleCNN(nn.Module):
         x = self.fc2(x)
         return x
 
-def train(model, device, loader, optimizer, criterion):
+def train(model, device, loader, optimizer, criterion, num_epochs=10):
     model.train()
-    for data, target in loader:
-        data, target = data.to(device), target.to(device)
-        optimizer.zero_grad()
-        output = model(data)
-        loss = criterion(output, target)
-        loss.backward()
-        optimizer.step()
+    for epoch in range(num_epochs):
+        running_loss = 0.0
+        for data, target in loader:
+            data, target = data.to(device), target.to(device)
+            optimizer.zero_grad()
+            output = model(data)
+            loss = criterion(output, target)
+            loss.backward()
+            optimizer.step()
+            running_loss += loss.item()
 
 def test(model, device, loader):
     model.eval()
     correct = 0
     total = 0
+    class_correct = [0] * 10
+    class_total = [0] * 10
+    all_preds = []
+    all_targets = []
+
     with torch.no_grad():
         for data, target in loader:
             data, target = data.to(device), target.to(device)
@@ -44,4 +50,14 @@ def test(model, device, loader):
             pred = output.argmax(dim=1)
             correct += pred.eq(target).sum().item()
             total += target.size(0)
-    return correct / total
+            all_preds.extend(pred.cpu().numpy())
+            all_targets.extend(target.cpu().numpy())
+
+            for label, p in zip(target, pred):
+                if label == p:
+                    class_correct[label] += 1
+                class_total[label] += 1
+
+    overall_accuracy = 100 * correct / total
+    class_accuracies = [100 * class_correct[i] / class_total[i] if class_total[i] > 0 else 0 for i in range(10)]
+    return overall_accuracy, class_accuracies, all_targets, all_preds
