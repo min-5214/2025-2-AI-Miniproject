@@ -21,10 +21,9 @@ class SimpleCNN(nn.Module):
         x = self.fc2(x)
         return x
 
-def train(model, device, loader, optimizer, criterion, num_epochs=10):
+def train(model, device, loader, optimizer, criterion, num_epochs=5):
     model.train()
     for epoch in range(num_epochs):
-        running_loss = 0.0
         for data, target in loader:
             data, target = data.to(device), target.to(device)
             optimizer.zero_grad()
@@ -32,7 +31,6 @@ def train(model, device, loader, optimizer, criterion, num_epochs=10):
             loss = criterion(output, target)
             loss.backward()
             optimizer.step()
-            running_loss += loss.item()
 
 def test(model, device, loader):
     model.eval()

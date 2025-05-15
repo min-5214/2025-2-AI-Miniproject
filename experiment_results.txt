@@ -41,16 +41,44 @@ Class-wise Accuracies:
   ship: 68.30%
   truck: 75.90%
 
-Experiment: Input Perturbation
-Overall Accuracy: 69.53%
+Experiment: Cropped Images
+Overall Accuracy: 71.95%
 Class-wise Accuracies:
-  airplane: 76.30%
-  automobile: 84.90%
-  bird: 52.30%
-  cat: 43.70%
-  deer: 57.40%
-  dog: 65.20%
-  frog: 87.40%
-  horse: 72.50%
-  ship: 83.50%
-  truck: 72.10%
+  airplane: 73.80%
+  automobile: 82.90%
+  bird: 52.70%
+  cat: 48.30%
+  deer: 67.30%
+  dog: 73.60%
+  frog: 80.20%
+  horse: 71.20%
+  ship: 88.20%
+  truck: 81.30%
+
+Experiment: Flipped Images
+Overall Accuracy: 71.86%
+Class-wise Accuracies:
+  airplane: 76.00%
+  automobile: 81.50%
+  bird: 69.50%
+  cat: 44.70%
+  deer: 64.40%
+  dog: 62.90%
+  frog: 80.80%
+  horse: 73.90%
+  ship: 86.80%
+  truck: 78.10%
+
+Experiment: Blurred Images
+Overall Accuracy: 71.16%
+Class-wise Accuracies:
+  airplane: 77.80%
+  automobile: 89.60%
+  bird: 56.40%
+  cat: 51.40%
+  deer: 71.50%
+  dog: 61.20%
+  frog: 75.00%
+  horse: 75.60%
+  ship: 77.40%
+  truck: 75.70%
