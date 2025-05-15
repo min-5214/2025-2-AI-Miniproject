@@ -27,7 +27,7 @@ Class-wise Accuracies:
   ship: 8.10%
   truck: 37.00%
 
-Experiment: Label Noise (20%)
+Experiment: Label Noise
 Overall Accuracy: 66.79%
 Class-wise Accuracies:
   airplane: 74.20%
