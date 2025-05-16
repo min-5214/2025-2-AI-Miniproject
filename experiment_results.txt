@@ -27,7 +27,7 @@ Class-wise Accuracies:
   ship: 8.10%
   truck: 37.00%
 
-Experiment: Label Noise
+Experiment: Label Noise 20%
 Overall Accuracy: 66.79%
 Class-wise Accuracies:
   airplane: 74.20%
@@ -41,44 +41,86 @@ Class-wise Accuracies:
   ship: 68.30%
   truck: 75.90%
 
-Experiment: Cropped Images
-Overall Accuracy: 71.95%
+Experiment: Label Noise 40%
+Overall Accuracy: 59.98%
 Class-wise Accuracies:
-  airplane: 73.80%
-  automobile: 82.90%
-  bird: 52.70%
-  cat: 48.30%
-  deer: 67.30%
-  dog: 73.60%
-  frog: 80.20%
-  horse: 71.20%
-  ship: 88.20%
-  truck: 81.30%
+  airplane: 64.60%
+  automobile: 62.80%
+  bird: 35.00%
+  cat: 45.10%
+  deer: 67.50%
+  dog: 46.80%
+  frog: 72.00%
+  horse: 62.70%
+  ship: 69.20%
+  truck: 74.10%
+
+Experiment: Label Noise 60%
+Overall Accuracy: 49.92%
+Class-wise Accuracies:
+  airplane: 57.70%
+  automobile: 57.20%
+  bird: 47.70%
+  cat: 34.90%
+  deer: 43.60%
+  dog: 37.10%
+  frog: 45.70%
+  horse: 43.40%
+  ship: 76.00%
+  truck: 55.90%
+
+Experiment: Label Noise 80%
+Overall Accuracy: 29.10%
+Class-wise Accuracies:
+  airplane: 42.60%
+  automobile: 15.40%
+  bird: 26.50%
+  cat: 5.20%
+  deer: 18.30%
+  dog: 23.30%
+  frog: 39.20%
+  horse: 42.70%
+  ship: 49.60%
+  truck: 28.20%
+
+Experiment: Cropped Images
+Overall Accuracy: 70.58%
+Class-wise Accuracies:
+  airplane: 88.80%
+  automobile: 88.60%
+  bird: 45.60%
+  cat: 52.40%
+  deer: 56.20%
+  dog: 59.40%
+  frog: 88.10%
+  horse: 77.60%
+  ship: 71.10%
+  truck: 78.00%
 
 Experiment: Flipped Images
-Overall Accuracy: 71.86%
+Overall Accuracy: 72.41%
 Class-wise Accuracies:
-  airplane: 76.00%
-  automobile: 81.50%
-  bird: 69.50%
-  cat: 44.70%
-  deer: 64.40%
-  dog: 62.90%
-  frog: 80.80%
-  horse: 73.90%
-  ship: 86.80%
-  truck: 78.10%
+  airplane: 70.80%
+  automobile: 79.60%
+  bird: 63.50%
+  cat: 55.30%
+  deer: 69.90%
+  dog: 61.00%
+  frog: 79.50%
+  horse: 77.10%
+  ship: 83.10%
+  truck: 84.30%
 
 Experiment: Blurred Images
-Overall Accuracy: 71.16%
+Overall Accuracy: 71.09%
 Class-wise Accuracies:
-  airplane: 77.80%
-  automobile: 89.60%
-  bird: 56.40%
-  cat: 51.40%
-  deer: 71.50%
-  dog: 61.20%
-  frog: 75.00%
-  horse: 75.60%
-  ship: 77.40%
-  truck: 75.70%
+  airplane: 71.90%
+  automobile: 79.40%
+  bird: 68.20%
+  cat: 42.10%
+  deer: 76.60%
+  dog: 62.00%
+  frog: 76.20%
+  horse: 72.10%
+  ship: 82.20%
+  truck: 80.20%
